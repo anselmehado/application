@@ -9,13 +9,11 @@
 
   </tr>
 <% @tasks.each do |task| %>
-
   <tr>
     <td><%= task.name %></td>
     <td><%= task.content %></td>
     <td><%= task.deadline %></td>
     <td><%= task.status %></td>
-    <td><%= task.orderTask %></td>
 
       <td><%= link_to 'Check the details', task_path(task.id) %></td>
       <td><%= link_to "Edit task", edit_task_path(task.id) %></td>
@@ -27,4 +25,4 @@
 
 </table>
 <br>
-<%= link_to 'creer a new task', new_task_path %>
+<%= link_to 'creation de nouvelle task', new_task_path %>

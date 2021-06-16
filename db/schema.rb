@@ -20,7 +20,6 @@ ActiveRecord::Schema.define(version: 2021_06_15_030636) do
     t.text "content"
     t.date "deadline"
     t.string "status"
-    t.integer "orderTask"
   end
 
 end

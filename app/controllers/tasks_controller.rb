@@ -4,9 +4,25 @@ class TasksController < ApplicationController
       @tasks = Task.all
     end
     def new
-        @task = Task.new
+      @task = Task.new
     end
 
+
+  # def create
+  # @task = Task.new(task_params)
+  # if params[:back]
+  #   render :new
+  # else
+  #   if @task.save
+  #     redirect_to tasks_path, notice: "takc！"
+  #   else
+  #     render :new
+  #   end
+  # end
+  # end
+
+
+    #
     def create
       @task = Task.new(task_params)
       if params[:back]
@@ -47,11 +63,16 @@ class TasksController < ApplicationController
       @task.destroy
       redirect_to tasks_path, notice:"I deleted the task!"
     end
+
+
     private
     def task_params
-      params.require(:task).permit(:name, :content, :deadline, :status, :orderTask)
+      params.require(:task).permit(:name, :content, :deadline, :status)
     end
+
     def set_task
-          @task = Task.find(params[:id])
+      @task = Task.find(params[:id])
     end
+
+
 end

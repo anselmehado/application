@@ -5,7 +5,6 @@ class CreateTasks < ActiveRecord::Migration[5.2]
       t.text :content
       t.date :deadline
       t.string :status
-      t.integer :orderTask 
     end
   end
 end

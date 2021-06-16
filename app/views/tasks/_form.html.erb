@@ -12,19 +12,15 @@
 
     <div class="task_form">
 
-        <%= f.fields_for :tasks do |f| %>
-
-        <%= f.label :Task %><br>
-        <%= f.text_field :name %><br>
-        <%= f.label :Content %><br>
-        <%= f.text_field :content %><br>
-        <%= f.label :Deadline %><br>
-        <%= f.text_field :deadline %><br>
-        <%= f.label :Status %><br>
-        <%= f.text_field :status %><br>
-        <%= f.label :Order %><br>
-        <%= f.text_field :orderTask %><br>
-
+        <%= f.fields_for :tasks do |t| %>
+        <%= t.label :Task %><br>
+        <%= t.text_field :name %><br>
+        <%= t.label :Content %><br>
+        <%= t.text_field :content %><br>
+        <%= t.label :Deadline %><br>
+        <%= t.text_field :deadline %><br>
+        <%= t.label :Status %><br>
+        <%= t.text_field :status %><br>
         <% end %>
 </div>
 
